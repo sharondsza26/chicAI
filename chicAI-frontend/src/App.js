@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import { Container, Navbar } from 'react-bootstrap';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import Header from './components/Header/Header';
+import WardrobeManagement from './components/wardrobeManagement/MainContent/MainContent';
+import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route,Routes } from 'react-router-dom';
+import Laundry from './components/Laundry/Laundry';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <Container className='App' fluid>
+      {/* Header */}
+      <div className='nav-and-header'>
+
+      {/* Navigation Bar */}
+        <NavigationBar />
+
+        {/* Nav Bar Brand */}
+        <div className='navbar-brand-app'>
+        <Navbar.Brand href="#chic-ai" className='navbar-brand'>
+          ChicAI</Navbar.Brand>
+          </div>
+
+        {/* Header Content */}
+        <Header />
+      </div>
+
+      <Routes>
+          {/* Default Route */}
+          <Route path="/" element={<WardrobeManagement />} />
+
+          {/* Specific Routes */}
+          <Route path="/wardrobe-management" element={<WardrobeManagement />} />
+          <Route path="/laundry" element={<Laundry />} />
+        </Routes>
+
+      {/* Footer Content */}
+      <Footer />
+      </Container>
+      </Router>
   );
 }
 

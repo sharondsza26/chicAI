@@ -1,0 +1,25 @@
+.NavigationBar {
+    display: flex; 
+    align-items: start;
+    justify-content: space-around;
+}
+
+.navigation-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.Nav .NavLink{
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.navbar-toggler-icon {
+    color: white;
+  }
+
+.navbar {
+    text-align: start;
+}

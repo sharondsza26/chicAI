@@ -1,0 +1,30 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    padding: 5px;
+    
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    
+}
+
+.favorites-icon {
+    font-size: x-large;
+    text-align: center;
+}
+
+.user-icon {
+    font-size: large;
+    text-align: center;
+}
+
+.user-icon .dropdown-toggle::after {
+    color: white;
+}

@@ -1,0 +1,26 @@
+.footer {
+    padding: 10px 0;
+    text-align: center;
+    bottom: 0;
+    /* position: fixed; */
+    width: 100%;
+}
+
+.footer-content{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(174, 86, 196, 1);
+  }
+
+.react-icon{
+    font-size: xx-large;
+    padding: 10px;
+  }
+
+.contact-us {
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+  } 
