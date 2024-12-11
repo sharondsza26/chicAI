@@ -1,0 +1,27 @@
+:root {
+	--bs-primary: #9b59b6 !important;
+	--bs-hover-bg: #6d3583 !important;
+}
+
+.btn-outline-primary {
+	color: var(--bs-primary) !important;
+	border-color: var(--bs-primary) !important;
+}
+
+.btn-outline-primary:hover {
+	background-color: var(--bs-primary) !important;
+	color: #fff !important;
+}
+
+.btn-primary {
+	background-color: var(--bs-primary) !important;
+}
+
+.btn-primary:hover {
+	background-color: var(--bs-hover-bg) !important;
+}
+
+h1,
+h2 {
+	color: var(--bs-primary) !important;
+}
