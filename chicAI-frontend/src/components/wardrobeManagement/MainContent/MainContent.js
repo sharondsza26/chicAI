@@ -195,6 +195,7 @@ function MainContent({ userId }) {
                         style: item.style,
                         color: item.color,
                         pattern: item.pattern,
+                        laundryStatus: item.laundryStatus,
                       }}
                     >
                       <Card.Img variant="top" src={`https://${process.env.REACT_APP_AWS_BUCKET_NAME}.s3.${process.env.REACT_APP_AWS_REGION}.amazonaws.com/${item._id}.jpg` || '/dummy-sweater.png'} />

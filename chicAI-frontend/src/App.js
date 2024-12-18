@@ -12,6 +12,7 @@ import OutfitManagement from "./components/outfitsManage/OutfitManagement";
 import OutfitCreator from "./components/outfitsManage/OutfitCreator";
 import Laundry from './components/Laundry/Laundry';
 import Details from './components/wardrobeManagement/IndividualItemView/ItemEditView';
+import ProfilePage from './components/ProfilePage/ProfilePage';
 import './App.css';
 
 function App() {
@@ -55,6 +56,14 @@ function App() {
               path="/dashboard"
               element={
                 isSignedIn && userId ? <Dashboard /> : <Navigate to="/" />
+              }
+            />
+
+            {/* New Profile Page Route */}
+            <Route
+              path="/profile"
+              element={
+                isSignedIn && userId ? <ProfilePage /> : <Navigate to="/" />
               }
             />
             <Route path="/wardrobe-management" element={isSignedIn && userId ? <WardrobeManagement userId={userId} /> : <Navigate to="/" />} />

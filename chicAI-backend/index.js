@@ -10,6 +10,7 @@ import laundryRouter from "./routes/laundry.js";
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import multer from 'multer';
 import fs from 'fs';
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -113,6 +114,8 @@ app.use("/api/suggestions", suggestionsRouter);
 app.use("/api/outfits", outfitsRouter); // Updated route
 
 app.use("/api/laundry", laundryRouter);
+
+app.use("/api/users", userRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on port ${PORT}`);
